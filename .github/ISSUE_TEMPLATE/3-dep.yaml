@@ -1,0 +1,55 @@
+name: Dependency Issue
+description: File a dependency issue report.
+title: "[Dependency]: "
+labels: 
+  - dependency
+  - triage
+type: dependency
+body:
+- type: checkboxes
+  attributes:
+    label: Dependency Issue Checklist
+    description: Please ensure that you have completed the following steps before submitting your dependency issue report.
+    options:
+      - label: I have searched the issue tracker for similar reports
+        required: true
+      - label: I have attached relevant error logs (if applicable)
+        required: true
+      - label: I have provided my environment details
+        required: true
+      - label: I have provided information about the dependency (name, version, etc.)
+        required: true
+      - label: I agree to the contributor guidelines and code of conduct as outlined in the project's documentation
+        required: true
+- type: input
+  attributes:
+    label: Dependency Name
+    description: The name of the dependency.
+    placeholder: "Example: express"
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Dependency Version
+    description: The version of the dependency.
+    placeholder: "Example: 4.17.1"
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Updated Dependency Version
+    description: The updated version of the dependency.
+    placeholder: "Example: 4.17.2"
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Summary
+    description: A short summary of the dependency issue.
+    placeholder: "Example: Incompatible version of express"
+    render: markdown
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: "Thanks for completing our form!"

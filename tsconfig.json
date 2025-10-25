@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "nodenext",
+        "module": "nodenext",
+        "types": [ "node" ],
+        "allowImportingTsExtensions": true,
+        "noEmit": true,
+        "paths": {
+            "cmd/*": ["./commands/*/command.ts"],
+            "opts/*": ["./commands/*/options.ts"],
+            "lib/*": ["./lib/*.ts"],
+            "!cmds": ["./commands/main.ts"],
+            "!cfg": ["./configs.ts"],
+        }
+    },
+    "typeAcquisition": {
+        "include": [ "@types/defs.d.ts" ]
+    }
+}
