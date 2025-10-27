@@ -1,0 +1,22 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: CLI Tools
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Benjmain
+    name-particle: W.
+    family-names: Marsh
+    email: ben@benshawmean.com
+    orcid: 'https://orcid.org/0009-0004-6147-4725'
+repository-code: 'https://github.com/therealbenpai/cli-utils'
+url: 'https://projects.benshawmean.com/cli-utils'
+keywords:
+  - cli
+  - terminal
+  - utilities
+license: GPL-3.0-or-later
