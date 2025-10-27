@@ -4,7 +4,6 @@ title: "[Dependency]: "
 labels: 
   - dependency
   - triage
-type: dependency
 body:
 - type: checkboxes
   attributes:
