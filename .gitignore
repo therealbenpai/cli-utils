@@ -5,3 +5,4 @@ types/
 .env
 .DS_Store
 *lock*
+keys
