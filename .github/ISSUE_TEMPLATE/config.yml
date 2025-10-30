@@ -3,3 +3,18 @@ contact_links:
   - name: Developer Contact
     url: https://benshawmean.com/contact
     about: Get in touch with the developer for any inquiries or support.
+  - name: Security Policy
+    url: https://legal.benshawmean.com/security
+    about: Review the security policy for reporting vulnerabilities.
+  - name: Citation Information
+    url: https://projects.benshawmean.com/cli-utils/citation
+    about: Learn about the citation requirements for using this project.
+  - name: Contribution Guidelines
+    url: https://legal.benshawmean.com/contributing
+    about: Read the guidelines for contributing to this project.
+  - name: Code of Conduct
+    url: https://legal.benshawmean.com/conduct
+    about: Understand the code of conduct for this community.
+  - name: Formatted License
+    url: https://legal.benshawmean.com/license/GPL
+    about: View the formatted GPL 3.0 license for this project.

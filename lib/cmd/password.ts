@@ -1,19 +1,21 @@
-import Argon, { type Options as ArgonOpts, Algorithm, Version } from '@node-rs/argon2';
+import crypto from 'crypto';
 
 class PasswordManager {
     public static hashPassword(password: string, argv: any): string {
-        const hashedPassword = Argon.hashSync(
-            password as string,
-            {
-                algorithm: Algorithm.Argon2id,
-                version: Version.V0x13,
-                timeCost: argv.iterations as number,
-                memoryCost: argv.memory as number,
-                parallelism: argv.parallelism as number,
-                outputLen: argv.length as number,
-            } as ArgonOpts,
+        const salt = crypto.randomBytes(16);
+        const params = {
+            passes: argv.iterations as number,
+            memory: argv.memory as number,
+            parallelism: argv.parallelism as number,
+            tagLength: argv.length as number,
+            message: Buffer.from(password),
+            nonce: salt,
+        };
+        const hash = crypto.argon2Sync(
+            'argon2id',
+            params
         );
-        return hashedPassword;
+        return `$argon2id$v=19$m=${params.memory},t=${params.passes},p=${params.parallelism}$${salt.toBase64()}$${hash.toBase64()}`;
     }
 }
 

@@ -2,22 +2,52 @@
   "name": "cli-utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "type": "module",
   "scripts": {
     "start": "node --env-file=.env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://projects.benshawmean.com/cli-utils",
+  "bugs": {
+    "url": "https://github.com/therealbenpai/cli-utils/issues"
+  },
+  "repository": "github:therealbenpai/cli-utils",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "unrs-resolver"
+    ]
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/therealbenpai"
+  },
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://github.com/sponsors/therealbenpai"
+    }
+  ],
+  "author": {
+    "name": "Benshawmean",
+    "email": "ben@benshawmean.com",
+    "url": "https://benshawmean.com"
+  },
+  "contributors": [
+    {
+      "name": "Benshawmean",
+      "email": "ben@benshawmean.com",
+      "url": "https://benshawmean.com"
+    }
+  ],
+  "license": "GPL-3.0",
   "packageManager": "pnpm@10.19.0",
   "dependencies": {
     "@inquirer/prompts": "^7.9.0",
     "@node-rs/argon2": "^2.0.2",
-    "argon2": "^0.44.0",
-    "argon2id": "^1.0.1",
     "chalk": "^5.6.2",
+    "dotenv": "^17.2.3",
     "figlet": "^1.9.3",
     "inquirer": "^12.10.0",
     "jose": "^6.1.0",
@@ -30,5 +60,9 @@
     "@types/node": "^24.9.1",
     "@types/yargs": "^17.0.33",
     "env": "^0.0.2"
+  },
+  "engines": {
+    "node": ">=24",
+    "npm": ">=9"
   }
 }
