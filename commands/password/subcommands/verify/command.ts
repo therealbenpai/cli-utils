@@ -2,6 +2,7 @@ import Argon from '@node-rs/argon2';
 import { input, password } from '@inquirer/prompts';
 import Options from 'opts/password/subcommands/verify';
 import Command from "lib/command";
+import PasswordManager from 'cmd/cls/password';
 
 const Verify = new Command(
     'verify',

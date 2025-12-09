@@ -1,16 +1,18 @@
-import Command from "lib/command";
-import Hash from 'cmd/password/subcommands/hash';
-import Verify from 'cmd/password/subcommands/verify';
-import Options from 'opts/password';
+import Command from 'lib/command';
+import Generate from 'cmd/token/subcommands/generate';
+import Validate from 'cmd/token/subcommands/validate';
+import Deserialize from 'cmd/token/subcommands/deserialize';
+import Options from 'opts/token';
 
 export default new Command(
-    'password',
+    'token',
     {
-        describe: 'Password hashing and verification utilities'
+        describe: 'JWT token generation and management utilities'
     },
     Options,
     [
-        Hash,
-        Verify,
+        Generate,
+        Validate,
+        Deserialize,
     ]
 );

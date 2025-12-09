@@ -2,7 +2,7 @@ import Spinner from 'lib/spinner';
 import { password } from '@inquirer/prompts';
 import Options from 'opts/password/subcommands/hash';
 import Command from "lib/command";
-import PasswordManager from 'cmd/cls/password';
+import PasswordManager from 'lib/cmd/password';
 
 const Hash = new Command(
     'hash',

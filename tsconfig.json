@@ -9,6 +9,7 @@
             "cmd/*": ["./commands/*/command.ts"],
             "opts/*": ["./commands/*/options.ts"],
             "lib/*": ["./lib/*.ts"],
+            "cmd/cls/*": ["./commands/*/class.ts"],
             "!cmds": ["./commands/main.ts"],
             "!cfg": ["./configs.ts"],
         }

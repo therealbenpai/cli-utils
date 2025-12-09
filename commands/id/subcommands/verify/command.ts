@@ -3,7 +3,7 @@ import { input, password } from '@inquirer/prompts';
 import Options from 'opts/password/subcommands/verify';
 import Command from "lib/command";
 
-const Validate = new Command(
+const Verify = new Command(
     'verify',
     {
         describe: 'Verify a password using Argon2',
@@ -12,7 +12,7 @@ const Validate = new Command(
     []
 )
 
-Validate.handle = async (_argv) => {
+Verify.handle = async (_argv) => {
     const
         original = await password({ message: 'Enter the password to verify:', mask: '⚛' }),
         hash = await input({ message: 'Enter the hash to verify against:' }),
@@ -21,4 +21,4 @@ Validate.handle = async (_argv) => {
     console.log(`Password is ${isValid ? '' : 'in'}valid.`);
 }
 
-export default Validate
+export default Verify

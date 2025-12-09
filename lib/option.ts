@@ -1,15 +1,18 @@
 import type { Options as YargOption } from "yargs";
 import { z } from "zod";
 
-class Option<K extends string = string, V extends z.ZodTypeAny = z.infer<any>> {
-    name: K;
-    options: Partial<YargOption>;
-    fmt: z.ZodType<any>;
+class Option<
+    K extends string,
+    V extends z.ZodType
+> {
+    public name: K;
+    public options: Partial<YargOption>;
+    public fmt: V;
 
     constructor(
         name: K,
         options: Partial<YargOption>,
-        format: V = undefined as V,
+        format: V,
     ) {
         this.name = name;
         this.options = options;
